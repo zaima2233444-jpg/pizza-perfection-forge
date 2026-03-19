@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -24,7 +24,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://www.foodpanda.pk"
+            href="https://wa.me/923345892999?text=Hi%2C%20I%20would%20like%20to%20place%20an%20order"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-fire px-6 py-2.5 rounded-lg font-body text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
@@ -46,7 +46,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://www.foodpanda.pk"
+            href="https://wa.me/923345892999?text=Hi%2C%20I%20would%20like%20to%20place%20an%20order"
             target="_blank"
             rel="noopener noreferrer"
             className="block text-center bg-gradient-fire px-6 py-2.5 rounded-lg font-body text-sm font-semibold text-primary-foreground"
