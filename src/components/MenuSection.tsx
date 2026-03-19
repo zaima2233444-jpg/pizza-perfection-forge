@@ -1,12 +1,5 @@
-import foodGyro from "@/assets/food-gyro.jpg";
-import foodZinger from "@/assets/food-zinger.jpg";
-
-const menuItems = [
-  { name: "Crispy Gyro", price: "PKR 250", desc: "Savory, seasoned meat wrapped in warm pita with fresh vegetables and creamy sauce.", img: foodGyro },
-  { name: "Gyro", price: "PKR 250", desc: "A flavorful wrap filled with seasoned meat, fresh vegetables, and tangy sauce.", img: foodGyro },
-  { name: "Zinger Burger", price: "PKR 300", desc: "Crispy chicken fillet sandwich with spicy sauce, lettuce, and a soft bun.", img: foodZinger },
-  { name: "Zinger Burger With Cheese", price: "PKR 350", desc: "Crispy chicken patty, melted cheese, fresh lettuce, and spicy sauce.", img: foodZinger },
-];
+import { Link } from "react-router-dom";
+import { menuItems, getWhatsAppLink } from "@/data/menu";
 
 const MenuSection = () => {
   return (
@@ -19,7 +12,7 @@ const MenuSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {menuItems.map((item) => (
-            <div key={item.name} className="group bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow">
+            <Link to={`/product/${item.slug}`} key={item.slug} className="group bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow cursor-pointer">
               <div className="h-52 overflow-hidden">
                 <img src={item.img} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
@@ -30,13 +23,13 @@ const MenuSection = () => {
                 </div>
                 <p className="font-body text-sm text-muted-foreground">{item.desc}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         <div className="text-center mt-12">
           <a
-            href="https://wa.me/923345892999?text=Hi%2C%20I%20would%20like%20to%20place%20an%20order"
+            href={getWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-gradient-fire px-10 py-4 rounded-lg font-body text-base font-bold text-primary-foreground hover:opacity-90 transition-opacity shadow-glow"

@@ -1,3 +1,4 @@
+import { getWhatsAppLink } from "@/data/menu";
 import heroPizza from "@/assets/hero-pizza.jpg";
 
 const HeroSection = () => {
@@ -22,7 +23,7 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
             <a
-              href="https://wa.me/923345892999?text=Hi%2C%20I%20would%20like%20to%20place%20an%20order"
+              href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-fire px-8 py-4 rounded-lg font-body text-base font-bold text-primary-foreground hover:opacity-90 transition-opacity shadow-glow"
