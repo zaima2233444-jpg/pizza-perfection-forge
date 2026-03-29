@@ -18,8 +18,8 @@ export const menuItems: MenuItem[] = [
 ];
 
 export const getWhatsAppLink = (itemName?: string, price?: string) => {
-  const message = itemName && price
-    ? `Hi NF Pizza, I would like to order ${itemName} for ${price}.`
-    : "Hi, I would like to place an order";
-  return `https://wa.me/923345892999?text=${encodeURIComponent(message)}`;
+  if (itemName && price) {
+    return `https://wa.me/923345892999?text=Hi%20NF%20Pizza,%20I%20would%20like%20to%20order%20${itemName.replace(/ /g, '%20')}%20for%20${price.replace(/ /g, '%20')}.`;
+  }
+  return "https://wa.me/923345892999?text=Hi%20NF%20Pizza,%20I%20would%20like%20to%20place%20an%20order.";
 };
