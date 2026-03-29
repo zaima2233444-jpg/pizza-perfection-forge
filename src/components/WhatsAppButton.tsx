@@ -4,7 +4,7 @@ const WhatsAppButton = () => (
   <Tooltip>
     <TooltipTrigger asChild>
       <a
-        href="https://wa.me/923345892999?text=Hi%2C%20I%20would%20like%20to%20place%20an%20order"
+        href="https://wa.me/923345892999?text=Hi%20NF%20Pizza,%20I%20would%20like%20to%20place%20an%20order."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
